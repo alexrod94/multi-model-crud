@@ -1,0 +1,9 @@
+<h1>{{user.username}}</h1>
+<p>Email: {{user.email}}</p>
+
+<h2>List of pets:</h2>
+<ul>
+  {{#each user.pets}}
+    <li><a href="/pets/pet/{{this._id}}">{{this.name}}</a></li>
+  {{/each}}
+</ul>

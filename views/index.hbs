@@ -1,0 +1,12 @@
+<h1>My pet app</h1>
+{{#if users}}
+  <h2>List of users:</h2>
+  <ul>
+    {{#each users}}
+      <li><a href="/user/{{this._id}}">{{this.username}}</a></li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No users yet...</p>
+{{/if}}
+<a href="/create-user">Create new user</a>
